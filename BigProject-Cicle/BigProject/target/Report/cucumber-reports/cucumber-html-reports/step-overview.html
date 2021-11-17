@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>Big Project Cicle App</td>
+                          <td>1</td>
+                        <td>23 Oct 2021, 11:19</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">AddCardNameSteps.the_User_get_message_Notification_success()</td>
+                <td>1</td>
+                <td class="duration" data-value="3076343333">3s 076ms</td>
+                <td class="duration" data-value="3076343333">3s 076ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddCardNameSteps.user_Added_as_card_name(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="2659184290">2s 659ms</td>
+                <td class="duration" data-value="2659184290">2s 659ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddCardNameSteps.user_on_the_Board_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="923136119">923ms</td>
+                <td class="duration" data-value="923136119">923ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddListSteps.user_Add_List_Board(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1268454039">1s 268ms</td>
+                <td class="duration" data-value="1268454039">1s 268ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddListSteps.user_Click_Save_button()</td>
+                <td>1</td>
+                <td class="duration" data-value="3448880075">3s 448ms</td>
+                <td class="duration" data-value="3448880075">3s 448ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddListSteps.user_access_Board_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="1259267339">1s 259ms</td>
+                <td class="duration" data-value="1259267339">1s 259ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddListSteps.user_successfully_to_Add_list_Board()</td>
+                <td>1</td>
+                <td class="duration" data-value="5047669067">5s 047ms</td>
+                <td class="duration" data-value="5047669067">5s 047ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddNewCommentSteps.user_Click_Save_Button()</td>
+                <td>1</td>
+                <td class="duration" data-value="421365376">421ms</td>
+                <td class="duration" data-value="421365376">421ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddNewCommentSteps.user_choose_cardname_will_be_add_to_comment()</td>
+                <td>1</td>
+                <td class="duration" data-value="1189134197">1s 189ms</td>
+                <td class="duration" data-value="1189134197">1s 189ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddNewCommentSteps.user_get_Message_Success()</td>
+                <td>1</td>
+                <td class="duration" data-value="3046632749">3s 046ms</td>
+                <td class="duration" data-value="3046632749">3s 046ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddNewCommentSteps.user_put_the_comments(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="3764879395">3s 764ms</td>
+                <td class="duration" data-value="3764879395">3s 764ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">AddNewCommentSteps.user_want_to_add_Comment_in_a_board()</td>
+                <td>1</td>
+                <td class="duration" data-value="300660520">300ms</td>
+                <td class="duration" data-value="300660520">300ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChatGroupSteps.user_Input_in_Group_Chat(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1455708734">1s 455ms</td>
+                <td class="duration" data-value="1455708734">1s 455ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChatGroupSteps.user_already_on_the_Dashboard_Page()</td>
+                <td>1</td>
+                <td class="duration" data-value="1363423682">1s 363ms</td>
+                <td class="duration" data-value="1363423682">1s 363ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChatGroupSteps.user_click_Send_Button()</td>
+                <td>1</td>
+                <td class="duration" data-value="139386963">139ms</td>
+                <td class="duration" data-value="139386963">139ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">ChatGroupSteps.user_success_send_chat_and_see_the_last_chat()</td>
+                <td>1</td>
+                <td class="duration" data-value="3051165948">3s 051ms</td>
+                <td class="duration" data-value="3051165948">3s 051ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CreateBlastsSteps.user_Publish_the_Blast_Message()</td>
+                <td>2</td>
+                <td class="duration" data-value="922132202">922ms</td>
+                <td class="duration" data-value="461066101">461ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CreateBlastsSteps.user_go_to_Blast_Page()</td>
+                <td>1</td>
+                <td class="duration" data-value="1389447984">1s 389ms</td>
+                <td class="duration" data-value="1389447984">1s 389ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CreateBlastsSteps.user_see_List_Blast()</td>
+                <td>1</td>
+                <td class="duration" data-value="3048113305">3s 048ms</td>
+                <td class="duration" data-value="3048113305">3s 048ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CreateBlastsSteps.user_set_and_set_time(String,String)</td>
+                <td>1</td>
+                <td class="duration" data-value="11369071271">11s 369ms</td>
+                <td class="duration" data-value="11369071271">11s 369ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">CreateBlastsSteps.user_type_a_as_Title_and_User_set_as_Story(String,String)</td>
+                <td>1</td>
+                <td class="duration" data-value="2332531829">2s 332ms</td>
+                <td class="duration" data-value="2332531829">2s 332ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.closeBrowser(Scenario)</td>
+                <td>11</td>
+                <td class="duration" data-value="6580303164">6s 580ms</td>
+                <td class="duration" data-value="598209378">598ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">Hooks.openBrowser()</td>
+                <td>11</td>
+                <td class="duration" data-value="87673790493">1m 27s 673ms</td>
+                <td class="duration" data-value="7970344590">7s 970ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MoveCardSteps.user_move_the_card_to_Todo_list_board()</td>
+                <td>1</td>
+                <td class="duration" data-value="8079774527">8s 079ms</td>
+                <td class="duration" data-value="8079774527">8s 079ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MoveCardSteps.user_on_the_Board_Page()</td>
+                <td>2</td>
+                <td class="duration" data-value="532875166">532ms</td>
+                <td class="duration" data-value="266437583">266ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MoveCardSteps.user_select_Card_will_be_move()</td>
+                <td>1</td>
+                <td class="duration" data-value="1109507678">1s 109ms</td>
+                <td class="duration" data-value="1109507678">1s 109ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">MoveCardSteps.user_successfully_to_Moved_Card()</td>
+                <td>1</td>
+                <td class="duration" data-value="3257785014">3s 257ms</td>
+                <td class="duration" data-value="3257785014">3s 257ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeAddCardSteps.the_User_get_message_Card_name_cannot_be_empty()</td>
+                <td>1</td>
+                <td class="duration" data-value="3139661946">3s 139ms</td>
+                <td class="duration" data-value="3139661946">3s 139ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeAddCardSteps.user_Add_Card_Name_but_the_name_is_Empty()</td>
+                <td>1</td>
+                <td class="duration" data-value="2104993240">2s 104ms</td>
+                <td class="duration" data-value="2104993240">2s 104ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeAddCardSteps.user_on_the_Boards_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="212450021">212ms</td>
+                <td class="duration" data-value="212450021">212ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeCreateBlast.user_Open_the_Blast_Page()</td>
+                <td>1</td>
+                <td class="duration" data-value="773487391">773ms</td>
+                <td class="duration" data-value="773487391">773ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeCreateBlast.user_get_message_Field_parameter_not_complete()</td>
+                <td>1</td>
+                <td class="duration" data-value="3312367788">3s 312ms</td>
+                <td class="duration" data-value="3312367788">3s 312ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeCreateBlast.user_on_Boards_Page()</td>
+                <td>1</td>
+                <td class="duration" data-value="1432300709">1s 432ms</td>
+                <td class="duration" data-value="1432300709">1s 432ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeSendFilesToChatSteps.user_Attached_as_files_in_Group_Chat(String)</td>
+                <td>2</td>
+                <td class="duration" data-value="8303287418">8s 303ms</td>
+                <td class="duration" data-value="4151643709">4s 151ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeSendFilesToChatSteps.user_has_the_Dashboard_Page()</td>
+                <td>2</td>
+                <td class="duration" data-value="3085136500">3s 085ms</td>
+                <td class="duration" data-value="1542568250">1s 542ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">NegativeSendFilesToChatSteps.user_unssuccessfully_send_file_to_Group_Chat()</td>
+                <td>2</td>
+                <td class="duration" data-value="232895983">232ms</td>
+                <td class="duration" data-value="116447991">116ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SendFilesToChatSteps.user_Attached_as_image_in_Group_Chat(String)</td>
+                <td>1</td>
+                <td class="duration" data-value="4116936736">4s 116ms</td>
+                <td class="duration" data-value="4116936736">4s 116ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SendFilesToChatSteps.user_access_the_Dashboard_Page()</td>
+                <td>1</td>
+                <td class="duration" data-value="1291583026">1s 291ms</td>
+                <td class="duration" data-value="1291583026">1s 291ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">SendFilesToChatSteps.user_success_send_image_and_see_the_last_image()</td>
+                <td>1</td>
+                <td class="duration" data-value="3155316119">3s 155ms</td>
+                <td class="duration" data-value="3155316119">3s 155ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>39</td>
+              <td>64</td>
+              <td class="duration">3m 9s 871ms</td>
+              <td class="duration">2s 966ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
